@@ -138,8 +138,8 @@ class JX {
 
         query = query.replace (/(\r\n|\n|\r)/gm, '');
     
-        const url = `${ window.location.origin }/mge/service.sbr?serviceName=DbExplorerSP.executeQuery&outputType=json`;
-        let dadosEnvio = `{ "serviceName": "DbExplorerSP.executeQuery", "requestBody": { "sql": "${ query }" } }`;
+        const url = `${ window.location.origin }/bolt-consultas/service.sbr?serviceName=BoltDbExplorerSP.executeQuery&outputType=json`;
+        let dadosEnvio = `{ "serviceName": "BoltDbExplorerSP.executeQuery", "requestBody": { "sql": "${ query }" } }`;
         dadosEnvio = JSON.parse (dadosEnvio);
     
         const requisicao = await JX.post (url, dadosEnvio);
